@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Far Grew 8</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Главное меню -->
+  <div id="mainMenu" class="menu screen">
+    <img src="assets/menu.png" class="menu-bg" alt="menu background" />
+    <div class="menu-content">
+      <h1>Far Grew 8</h1>
+      <p id="menuNickname">Ник: Гость</p>
+      <p id="menuRecord">🏆 Рекорд: 0</p>
+      <button onclick="startGame()">Играть</button>
+      <button onclick="openSettings()">Настройки</button>
+      <button onclick="exitGame()">Выход</button>
+    </div>
+  </div>
+
+  <!-- Настройки -->
+  <div id="settingsMenu" class="menu screen" style="display: none;">
+    <div class="menu-content">
+      <h2>Настройки</h2>
+      <label>Ник:</label>
+      <input type="text" id="nicknameInput" placeholder="Введите ник" />
+      <br><br>
+      <label>Громкость музыки:</label>
+      <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="1" />
+      <br><br>
+      <label>Громкость игры:</label>
+      <input type="range" id="sfxVolume" min="0" max="1" step="0.01" value="1" />
+      <br><br>
+      <button onclick="saveSettings()">Сохранить</button>
+      <button onclick="backToMainMenu()">Назад</button>
+    </div>
+  </div>
+
+  <!-- Экран окончания игры -->
+  <div id="gameOverScreen" class="menu screen" style="display: none;">
+    <div class="menu-content">
+      <h2>Game Over</h2>
+      <button onclick="backToMainMenu()">Back to Menu</button>
+    </div>
+  </div>
+
+  <!-- Игра -->
+  <div id="gameContainer" class="game-container">
+    <div id="mobileControls">
+      <button id="leftBtn">←</button>
+      <button id="rightBtn">→</button>
+    </div>
+    <canvas id="gameCanvas" width="540" height="960"></canvas>
+  </div>
+
+  <!-- Скрипт -->
+  <script src="game.js"></script>
+</body>
+</html>

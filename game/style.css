@@ -1,0 +1,120 @@
+/* Общие настройки */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+/* Центрированный холст */
+.game-container {
+  width: 540px;
+  height: 960px;
+  position: relative;
+  background-color: black;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Меню и экраны */
+.menu {
+  position: absolute;
+  width: 540px;
+  height: 960px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.menu-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.menu-content h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.menu-content p {
+  margin: 5px;
+  font-size: 18px;
+}
+
+.menu-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu-content button:hover {
+  background-color: #666;
+}
+
+.menu-content input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  width: 60%;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: none;
+}
+
+.menu-content input[type="range"] {
+  width: 70%;
+  margin-top: 10px;
+}
+#mobileControls {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  z-index: 20;
+}
+
+#mobileControls button {
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#mobileControls button:active {
+  background-color: #777;
+}
